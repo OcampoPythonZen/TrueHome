@@ -1,0 +1,28 @@
+{
+    "inmobiliarios":[
+        {
+            "direccion" : "cda lt 34 casa 24 fracc. paseos de ecatepec",
+            "datos_personales" :[
+                {
+                    "nombre_completo" : "edgar omar ocampo",
+                    "email" : "edgar.ocampo.b@gmail.com",
+                    "tel" : "5576028700"
+                }
+            ],
+                
+            "precio" : "1,877,950.00"
+        },
+        {
+            "direccion" : "san andres #22 fracc. paseos de tultepec",
+            "datos_personales" :[
+                {
+                    "nombre_completo" : "peter smith",
+                    "email" : "psmith@gmail.com",
+                    "tel" : "001278785656565"
+                }
+            ],
+                
+            "precio" : "2,177,950.00"
+        }
+    ]
+}
