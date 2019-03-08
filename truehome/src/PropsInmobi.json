@@ -2,27 +2,46 @@
     "inmobiliarios":[
         {
             "direccion" : "cda lt 34 casa 24 fracc. paseos de ecatepec",
-            "datos_personales" :[
-                {
-                    "nombre_completo" : "edgar omar ocampo",
-                    "email" : "edgar.ocampo.b@gmail.com",
-                    "tel" : "5576028700"
-                }
-            ],
-                
+            "nombre_titular": "edgar ocampo",
+            "telefono" : "5576028700",
+            "email": "edgar.ocampo.b@gmail.com",
             "precio" : "1,877,950.00"
         },
         {
             "direccion" : "san andres #22 fracc. paseos de tultepec",
-            "datos_personales" :[
-                {
-                    "nombre_completo" : "peter smith",
-                    "email" : "psmith@gmail.com",
-                    "tel" : "001278785656565"
-                }
-            ],
-                
+            "nombre_titular": "jhon smith",
+            "telefono" : "529984584570",
+            "email": "jsmith@gmail.com",
+            "precio" : "2,177,950.00"
+        },
+        {
+            "direccion" : "cda lt 34 casa 24 fracc. paseos de ecatepec",
+            "nombre_titular": "edgar ocampo",
+            "telefono" : "5576028700",
+            "email": "edgar.ocampo.b@gmail.com",
+            "precio" : "1,877,950.00"
+        },
+        {
+            "direccion" : "san andres #22 fracc. paseos de tultepec",
+            "nombre_titular": "jhon smith",
+            "telefono" : "529984584570",
+            "email": "jsmith@gmail.com",
+            "precio" : "2,177,950.00"
+        },
+        {
+            "direccion" : "cda lt 34 casa 24 fracc. paseos de ecatepec",
+            "nombre_titular": "edgar ocampo",
+            "telefono" : "5576028700",
+            "email": "edgar.ocampo.b@gmail.com",
+            "precio" : "1,877,950.00"
+        },
+        {
+            "direccion" : "san andres #22 fracc. paseos de tultepec",
+            "nombre_titular": "jhon smith",
+            "telefono" : "529984584570",
+            "email": "jsmith@gmail.com",
             "precio" : "2,177,950.00"
         }
+
     ]
 }
