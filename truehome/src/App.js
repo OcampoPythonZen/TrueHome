@@ -3,20 +3,34 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { inmobiliarios } from './PropsInmobi.json';
-import { faUser, faHome, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 import Dashboard from './own_components/Dashboard';
+import './own_components/FormInm'
 import './own_components/Dashboard.css';
+import FormInm from './own_components/FormInm';
+import { faUser, faHome, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 library.add(faUser)
 library.add(faHome)
 library.add(faStopwatch)
 
 class App extends Component {
+  //constructor
   constructor(){
     super();
     this.state = {
       inmobiliarios
-    }
+    };
+    this.handleAddCard = this.handleAddCard.bind(this);
   }
+
+  //own functions
+  handleAddCard(card){
+    this.setState({
+      //... Add into the created data.
+      inmobiliarios : [...this.state.inmobiliarios, card]
+    })
+  }
+
+  //render method
   render() {
     const inmobiliarios = this.state.inmobiliarios.map((pin,i) => {
       return(
@@ -41,7 +55,8 @@ class App extends Component {
     });
     return(
       <div className="App">
-        <Dashboard/>
+        <Dashboard title="Houses"/>
+        <FormInm onAddCard={this.handleAddCard}/>
         <div className="col-md-8">
           <div className="row">
             { inmobiliarios }
@@ -51,4 +66,5 @@ class App extends Component {
     );
   }
 }
+//export default
 export default App;
