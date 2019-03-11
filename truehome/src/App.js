@@ -30,11 +30,21 @@ class App extends Component {
     })
   }
 
+  RemoveCard(index){
+    console.log(index)
+    if (window.confirm("Seguro de eliminar?")){
+      this.setState({
+        inmobiliarios : this.state.inmobiliarios.filter((e,i) =>{
+          return i !== index
+        })
+      })
+    }
+  }
   //render method
   render() {
     const inmobiliarios = this.state.inmobiliarios.map((pin,i) => {
       return(
-        <div className="col-md-4">
+        <div className="col-md-4" key={i}>
           <div className="card mt-4">
             <div className="card-header">
               <h2>Direccion: { pin.direccion }</h2>
@@ -44,9 +54,19 @@ class App extends Component {
               <p>Email: { pin.email }</p>
             </div>
             <div className="card-footer">
-              <span className="badge badge-pillow badge-warning ml-2">
+              <span className="badge badge-pillow badge-info ml-2">
                 Precio: { pin.precio }
               </span>
+              <p>
+              <button className="btn btn-danger" onClick={this.RemoveCard.bind(this,i)}>
+                Eliminar
+              </button>
+              </p>
+              <p>
+              <button className="btn btn-warning"> 
+                Editar
+              </button>
+              </p>
             </div>
             </div>
           </div>
@@ -55,8 +75,23 @@ class App extends Component {
     });
     return(
       <div className="App">
-        <Dashboard title="Houses"/>
-        <FormInm onAddCard={this.handleAddCard}/>
+
+        <nav className="navbar navbar-dark bg-dark">
+          <a href="/" className="text-white">
+              Houses
+              <span className="badge badge-pill badge-warning ml-2">
+                  { this.state.inmobiliarios.length }
+              </span>
+          </a>
+        </nav>
+        <div className="container">
+          <div className="row mt-4">
+            <div className="col-md-4 text-center">
+            <FormInm onAddCard={this.handleAddCard}/>
+            </div>
+          </div>
+        </div>
+
         <div className="col-md-8">
           <div className="row">
             { inmobiliarios }

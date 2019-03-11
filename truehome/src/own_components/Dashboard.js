@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { inmobiliarios } from '../PropsInmobi.json';
+import inmobiliarios from '../PropsInmobi.json';
 
 class Dashboard extends Component{
     constructor(){
