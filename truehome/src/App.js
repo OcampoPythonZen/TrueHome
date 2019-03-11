@@ -4,6 +4,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { inmobiliarios } from './PropsInmobi.json';
 import { faUser, faHome, faStopwatch } from '@fortawesome/free-solid-svg-icons';
+import Dashboard from './own_components/Dashboard';
+import './own_components/Dashboard.css';
 library.add(faUser)
 library.add(faHome)
 library.add(faStopwatch)
@@ -39,6 +41,7 @@ class App extends Component {
     });
     return(
       <div className="App">
+        <Dashboard/>
         <div className="col-md-8">
           <div className="row">
             { inmobiliarios }

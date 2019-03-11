@@ -1,12 +1,3 @@
-body{
-    background-image: url('/src/own_components/img/casa_prefabricada.jpg');
-    min-height: 380px;
-
-    /*center and scale image*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    /*needed position the future navbar*/
-    position: relative;
+.container{
+    background-color: deepskyblue;
 }
